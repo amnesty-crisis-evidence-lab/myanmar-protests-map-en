@@ -1,5 +1,5 @@
 {
-  "name": "lebanon-arms-map-en",
+  "name": "myanmar-protests-map-en",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -39,5 +39,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://amnesty-crisis-evidence-lab.github.io/lebanon-arms-map-en"
+  "homepage": "https://amnesty-crisis-evidence-lab.github.io/myanmar-protests-map-en"
 }
