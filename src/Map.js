@@ -7,7 +7,7 @@ const highlights = [
   "MMR034",
   "MMR077",
   "MMR078",
-  "MMR05",
+  "MMR005",
   "MMR076",
   "MMR045",
   "MMR009",
