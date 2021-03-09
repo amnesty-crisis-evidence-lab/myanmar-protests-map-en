@@ -23,7 +23,7 @@ const Map = () => {
       });
 
       map.on("load", () => {
-        map.addSource("arms", {
+        map.addSource("events", {
           type: "geojson",
           data: geojson,
           cluster: true,
@@ -34,7 +34,7 @@ const Map = () => {
         map.addLayer({
           id: "clusters",
           type: "circle",
-          source: "arms",
+          source: "events",
           filter: ["has", "point_count"],
           paint: {
             "circle-color": "#ffff00",
@@ -56,7 +56,7 @@ const Map = () => {
         map.addLayer({
           id: "cluster-count",
           type: "symbol",
-          source: "arms",
+          source: "events",
           filter: ["has", "point_count"],
           layout: {
             "text-field": "{point_count_abbreviated}",
@@ -71,7 +71,7 @@ const Map = () => {
         map.addLayer({
           id: "unclustered-point",
           type: "circle",
-          source: "arms",
+          source: "events",
           filter: ["!", ["has", "point_count"]],
           paint: {
             "circle-color": "#ffff00",
@@ -90,7 +90,7 @@ const Map = () => {
           const { cluster_id: clusterId } = properties;
 
           map
-            .getSource("arms")
+            .getSource("events")
             .getClusterExpansionZoom(clusterId, (err, zoom) => {
               if (err) return;
 
@@ -121,7 +121,7 @@ const Map = () => {
           new mapboxgl.Popup()
             .setLngLat(coordinates)
             .setHTML(
-              `<strong>Event date:</strong> ${eventDate}<br><strong>Arms type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
+              `<strong>Event date:</strong> ${eventDate}<br><strong>Event type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
                 4
               )}<br><strong>Latitude:</strong> ${latitude.toFixed(4)}`
             )
