@@ -3,6 +3,17 @@ import mapboxgl from "mapbox-gl";
 import "./Map.css";
 import { geojson } from "./data";
 
+const highlights = [
+  "MMR034",
+  "MMR077",
+  "MMR078",
+  "MMR05",
+  "MMR076",
+  "MMR045",
+  "MMR009",
+  "MMR026"
+];
+
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
 const Map = () => {
@@ -76,7 +87,12 @@ const Map = () => {
           source: "events",
           filter: ["!", ["has", "point_count"]],
           paint: {
-            "circle-color": "#ffff00",
+            "circle-color": [
+              "case",
+              ["in", ["get", "content_code"], ["literal", highlights]],
+              "#de2209",
+              "#ffff00"
+            ],
             "circle-radius": 6,
             "circle-opacity": 0.8,
             "circle-stroke-width": 1,
