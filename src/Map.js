@@ -13,23 +13,16 @@ const Map = () => {
     const initialiseMap = ({ setMap, containerRef }) => {
       const map = new mapboxgl.Map({
         container: containerRef.current,
-        style: "mapbox://styles/amnestydecoders/ckjy6y3ll2ha317pjtsmwqne4",
-        center: [35.8481945, 33.8841665],
-        zoom: 5,
-        minZoom: 5,
-        maxZoom: 16,
+        style: "mapbox://styles/amnestydecoders/ckm1071uf3jsd17r1ylzcy1tk",
+        bounds: [
+          [91.833, 6],
+          [102, 28.35]
+        ],
+        fitBoundsOptions: { padding: 20 },
         scrollZoom: false
       });
 
       map.on("load", () => {
-        map.fitBounds(
-          [
-            [35.4832837, 33.878763],
-            [35.5097186, 33.898162]
-          ],
-          { padding: 80 }
-        );
-
         map.addSource("arms", {
           type: "geojson",
           data: geojson,
