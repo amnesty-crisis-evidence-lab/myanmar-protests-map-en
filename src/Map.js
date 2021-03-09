@@ -41,10 +41,10 @@ const Map = () => {
             "circle-radius": [
               "step",
               ["get", "point_count"],
-              20,
               10,
-              30,
-              50,
+              10,
+              20,
+              20,
               40
             ],
             "circle-opacity": 0.8,
