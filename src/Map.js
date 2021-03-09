@@ -43,9 +43,9 @@ const Map = () => {
             "circle-radius": [
               "step",
               ["get", "point_count"],
-              10,
-              10,
               20,
+              10,
+              30,
               20,
               40
             ],
