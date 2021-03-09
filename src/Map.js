@@ -23,6 +23,8 @@ const Map = () => {
       });
 
       map.on("load", () => {
+        map.setMinZoom(map.getZoom());
+
         map.addSource("events", {
           type: "geojson",
           data: geojson,
