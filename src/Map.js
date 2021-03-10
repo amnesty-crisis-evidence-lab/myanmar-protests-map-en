@@ -123,7 +123,9 @@ const Map = () => {
           const { geometry, properties } = e.features[0];
           const coordinates = geometry.coordinates.slice();
           const {
-            source_link: sourceLink,
+            source_link1: sourceLink1,
+            source_link2: sourceLink2,
+            source_link3: sourceLink3,
             graphic,
             event_date: eventDate,
             latitude,
@@ -151,7 +153,17 @@ const Map = () => {
                   4
                 )}<br><strong>Latitude:</strong> ${latitude.toFixed(
                   4
-                )}<br><strong>Source: </strong><a href=${sourceLink} target="_blank" />${sourceLink}</a>` +
+                )}<br><strong>Source(s): </strong><a href=${sourceLink1} target="_blank" />${sourceLink1}</a>` +
+                `${
+                  sourceLink2 != "null"
+                    ? `;<br><a href=${sourceLink2} target="_blank" />${sourceLink2}</a>`
+                    : ""
+                }` +
+                `${
+                  sourceLink3 != "null"
+                    ? `;<br><a href=${sourceLink3} target="_blank" />${sourceLink3}</a>`
+                    : ""
+                }` +
                 `${
                   graphic
                     ? "<br>WARNING - GRAPHIC CONTENT: You may find some videos distressing"
