@@ -144,16 +144,15 @@ const Map = () => {
           new mapboxgl.Popup()
             .setLngLat(coordinates)
             .setHTML(
-              `${
-                eventsNo > 0
-                  ? `<strong>Number of events: </strong>${eventsNo}<br>`
-                  : ""
-              }` +
-                `<strong>Event(s) date:</strong> ${eventDate}<br><strong>Event(s) type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
-                  4
-                )}<br><strong>Latitude:</strong> ${latitude.toFixed(
-                  4
-                )}<br><strong>Source(s): </strong><a href=${sourceLink1} target="_blank" />${sourceLink1}</a>` +
+              `<strong>Event(s) date:</strong> ${eventDate}<br><strong>Event(s) type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
+                4
+              )}<br><strong>Latitude:</strong> ${latitude.toFixed(4)}<br>` +
+                `${
+                  eventsNo > 0
+                    ? `<strong>Number of events: </strong>${eventsNo}<br>`
+                    : ""
+                }` +
+                `<strong>Source(s): </strong><a href=${sourceLink1} target="_blank" />${sourceLink1}</a>` +
                 `${
                   sourceLink2 !== "null"
                     ? `;<br><a href=${sourceLink2} target="_blank" />${sourceLink2}</a>`
