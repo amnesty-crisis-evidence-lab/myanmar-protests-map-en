@@ -123,10 +123,13 @@ const Map = () => {
           const { geometry, properties } = e.features[0];
           const coordinates = geometry.coordinates.slice();
           const {
+            source_link: sourceLink,
+            graphic,
             event_date: eventDate,
-            longitude,
             latitude,
-            tooltip
+            longitude,
+            tooltip,
+            events_no: eventsNo
           } = properties;
 
           // Ensure that if the map is zoomed out such that multiple copies of the
@@ -139,9 +142,21 @@ const Map = () => {
           new mapboxgl.Popup()
             .setLngLat(coordinates)
             .setHTML(
-              `<strong>Event date:</strong> ${eventDate}<br><strong>Event type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
-                4
-              )}<br><strong>Latitude:</strong> ${latitude.toFixed(4)}`
+              `${
+                eventsNo > 0
+                  ? `<strong>Number of events: </strong>${eventsNo}<br>`
+                  : ""
+              }` +
+                `<strong>Event(s) date:</strong> ${eventDate}<br><strong>Event(s) type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
+                  4
+                )}<br><strong>Latitude:</strong> ${latitude.toFixed(
+                  4
+                )}<br><strong>Source: </strong><a href=${sourceLink} target="_blank" />${sourceLink}</a>` +
+                `${
+                  graphic
+                    ? "<br>WARNING - GRAPHIC CONTENT: You may find some videos distressing"
+                    : ""
+                }`
             )
             .addTo(map);
         });
