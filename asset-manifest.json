@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/myanmar-protests-map-en/static/css/main.b93ac3df.chunk.css",
-    "main.js": "/myanmar-protests-map-en/static/js/main.e8cb1d97.chunk.js",
-    "main.js.map": "/myanmar-protests-map-en/static/js/main.e8cb1d97.chunk.js.map",
+    "main.js": "/myanmar-protests-map-en/static/js/main.9b5737cb.chunk.js",
+    "main.js.map": "/myanmar-protests-map-en/static/js/main.9b5737cb.chunk.js.map",
     "runtime-main.js": "/myanmar-protests-map-en/static/js/runtime-main.1ad062a8.js",
     "runtime-main.js.map": "/myanmar-protests-map-en/static/js/runtime-main.1ad062a8.js.map",
     "static/js/2.0d78f361.chunk.js": "/myanmar-protests-map-en/static/js/2.0d78f361.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.1ad062a8.js",
     "static/js/2.0d78f361.chunk.js",
     "static/css/main.b93ac3df.chunk.css",
-    "static/js/main.e8cb1d97.chunk.js"
+    "static/js/main.9b5737cb.chunk.js"
   ]
 }
