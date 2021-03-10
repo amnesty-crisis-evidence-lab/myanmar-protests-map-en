@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/myanmar-protests-map-en/static/css/main.b93ac3df.chunk.css",
+    "main.css": "/myanmar-protests-map-en/static/css/main.72acb4dc.chunk.css",
     "main.js": "/myanmar-protests-map-en/static/js/main.38925fe4.chunk.js",
     "main.js.map": "/myanmar-protests-map-en/static/js/main.38925fe4.chunk.js.map",
     "runtime-main.js": "/myanmar-protests-map-en/static/js/runtime-main.1ad062a8.js",
@@ -10,13 +10,13 @@
     "static/js/3.0010c018.chunk.js": "/myanmar-protests-map-en/static/js/3.0010c018.chunk.js",
     "static/js/3.0010c018.chunk.js.map": "/myanmar-protests-map-en/static/js/3.0010c018.chunk.js.map",
     "index.html": "/myanmar-protests-map-en/index.html",
-    "static/css/main.b93ac3df.chunk.css.map": "/myanmar-protests-map-en/static/css/main.b93ac3df.chunk.css.map",
+    "static/css/main.72acb4dc.chunk.css.map": "/myanmar-protests-map-en/static/css/main.72acb4dc.chunk.css.map",
     "static/js/2.0d78f361.chunk.js.LICENSE.txt": "/myanmar-protests-map-en/static/js/2.0d78f361.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1ad062a8.js",
     "static/js/2.0d78f361.chunk.js",
-    "static/css/main.b93ac3df.chunk.css",
+    "static/css/main.72acb4dc.chunk.css",
     "static/js/main.38925fe4.chunk.js"
   ]
 }
