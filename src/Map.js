@@ -94,7 +94,7 @@ const Map = () => {
               "#ffff00"
             ],
             "circle-radius": 6,
-            "circle-opacity": 0.8,
+            "circle-opacity": 1,
             "circle-stroke-width": 1,
             "circle-stroke-color": "#ffffff"
           }
@@ -144,14 +144,9 @@ const Map = () => {
           new mapboxgl.Popup()
             .setLngLat(coordinates)
             .setHTML(
-              `<strong>Event(s) date:</strong> ${eventDate}<br><strong>Event(s) type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
+              `<strong>Number of events: </strong>${eventsNo}<br><strong>Event(s) date:</strong> ${eventDate}<br><strong>Event(s) type:</strong> ${tooltip}<br><strong>Longitude:</strong> ${longitude.toFixed(
                 4
               )}<br><strong>Latitude:</strong> ${latitude.toFixed(4)}<br>` +
-                `${
-                  eventsNo > 0
-                    ? `<strong>Number of events: </strong>${eventsNo}<br>`
-                    : ""
-                }` +
                 `<strong>Source(s): </strong><a href=${sourceLink1} target="_blank" />${sourceLink1}</a>` +
                 `${
                   sourceLink2 !== "null"
