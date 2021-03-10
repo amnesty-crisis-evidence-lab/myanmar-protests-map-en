@@ -8,4 +8,11 @@
 
 .mapboxgl-popup-content {
   font-family: Amnesty Trade Gothic, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+@supports not (overflow-wrap: anywhere) {
+  .mapboxgl-popup-content {
+    overflow-wrap: break-word;
+  }
 }
