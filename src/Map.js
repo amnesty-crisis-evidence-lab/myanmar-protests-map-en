@@ -155,12 +155,12 @@ const Map = () => {
                   4
                 )}<br><strong>Source(s): </strong><a href=${sourceLink1} target="_blank" />${sourceLink1}</a>` +
                 `${
-                  sourceLink2 != "null"
+                  sourceLink2 !== "null"
                     ? `;<br><a href=${sourceLink2} target="_blank" />${sourceLink2}</a>`
                     : ""
                 }` +
                 `${
-                  sourceLink3 != "null"
+                  sourceLink3 !== "null"
                     ? `;<br><a href=${sourceLink3} target="_blank" />${sourceLink3}</a>`
                     : ""
                 }` +
